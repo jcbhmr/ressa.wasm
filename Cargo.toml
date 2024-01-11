@@ -1,13 +1,18 @@
 [package]
-name = "hello-world-rust-wasm-component-lib"
-version = "1.1.0"
+name = "ressa-wasm"
+version = "0.1.0"
 edition = "2021"
-publish = false
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-wit-bindgen = { git = "https://github.com/bytecodealliance/wit-bindgen", version = "0.16.0" }
+cargo-component-bindings = "=0.6.0"
+ressa = "=0.8.2"
 
 [lib]
 crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "jcbhmr:ressa"
+
+[package.metadata.component.dependencies]
